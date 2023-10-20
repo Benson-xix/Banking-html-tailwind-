@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" type="text/css" rel="stylesheet">
+    <title>Card</title>
+</head>
+
+<body >
+    <div class="   w-full   md:p-4 xs:p-0 xl:gap-2 lg:gap-0  flex flex-row " style="height: 1000px;">
+        <nav class=" xxl:w-[20%] lg:w-[10%] relative    h-[100%] xs:hidden  xl:flex flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+            <div class="fixed ">
+             <div>
+                 <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex xxl:flex-row  lg:flex-col gap-2  ">
+                     <img src="./assets/images/logo.png" class="w-[48px] h-[48px]  justify-center items-center mx-auto "
+                         alt="logo">
+                     <h5 class="text-white xxl:text-[24px] xs:text-[24px]  lg:text-[16px] xxl:ml-[0rem]  lg:ml-[-0.8rem]  mx-auto  font-bold">PrimeLabs
+                     </h5>
+                 </a>
+             </div>
+             <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                 <div >
+                     <ul class="list-none flex flex-col no-underline gap-9   ">
+                         <li class="nav-links"  id="dashboard" >
+ 
+                             <a href="index.html"   class="flex gap-3 mx-auto text-white text-[20px] font-medium   "   >
+                                 <img src="./assets/images/ic_round-space-dashboard2.png" class="w-[30px] h-[30px]" alt="" >
+                                 <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                             </a>
+                         </li>
+                        
+                         <li class="nav-links" id="card">
+                             <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  active-link " >
+                                 <img src="./assets/images/card.png" alt="" class="w-[30px] h-[30px]">
+                                 <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                             </a>
+                         </li>
+                         <li class="nav-links" id="transfer"><a href="transfer.html" class="flex gap-3 mx-auto text-white text-[18px] font-medium  " >
+                                 <img src="./assets/images/Frame3.png" alt=""  class="w-[30px] h-[30px]">
+                                 <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                             </a></li>
+                         <li id="bill" class="nav-links"><a href="bill-payment.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                 <img src="./assets/images/Frame4.png" alt=""  class="w-[30px] h-[30px]">
+                                 <h5 class="lg:hidden xxl:flex xs:flex">
+                                     Payment
+                                 </h5>
+                             </a></li>
+
+                             <li id="report" class="nav-links"><a href="report.html"
+                                class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                    class="w-[30px] h-[30px]">
+                                <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                            </a></li>
+
+                         <li id="analytics" class="nav-links"><a href="Analytics.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                 <img src="./assets/images/graph.png" alt=""  class="w-[30px] h-[30px]">
+                                 <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                             </a></li>
+
+                             <li id="settings" class="nav-links">
+                                <a href="settings.html"  class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                <img src="./assets/images/Frame5.png" alt=""  class="w-[30px] h-[30px]">
+                                <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                            </a>
+                        </li>
+                     </ul>
+                 </div>
+                 <div>
+                     <ul class="list-none flex flex-col no-underline gap-9   ">
+                       
+                         <li id="log-out" class="nav-links">
+                             <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                 <img src="./assets/images/Frame6.png" alt=""  class="w-[30px] h-[30px] "  />
+                                 <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                         </a>
+                     </li>
+                     </ul>
+                 </div>
+             </div>
+            </div>
+         </nav>
+
+        <div id="hide"  style="display: none; width: 100%; position: fixed; left: 1%; top: 2%; z-index: 1000;">
+
+            <nav class=" w-[100%]   h-[200vh]   flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+                <div class="flex justify-end p-2" id="close">
+                    <img src="./assets/images/Frame11000003743.png"  class="w-[50px] cursor-pointer h-[50px]" alt="">
+                </div>
+                <div>
+                    <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex flex-row    ">
+                        <img src="./assets/images/logo.png" class="w-[48px] h-[48px]  justify-center items-center mx-auto "
+                            alt="logo">
+                        <h5 class="text-white text-[24px]    mx-auto  font-bold">PrimeLabs
+                        </h5>
+                    </a>
+                </div>
+                <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                    <div >
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                            <li class="nav-links"  id="dashboard" >
+    
+                                <a href="index.html"   class="flex gap-3 mx-auto text-white text-[20px] font-medium   "   >
+                                    <img src="./assets/images/ic_round-space-dashboard.png" class="w-[30px] h-[30px]" alt="" >
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                                </a>
+                            </li>
+                           
+                            <li class="nav-links" id="card">
+                                <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium active-link " >
+                                    <img src="./assets/images/Frame2.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                                </a>
+                            </li>
+                            <li class="nav-links" id="transfer"><a href="transfer.html" class="flex gap-3 mx-auto text-white text-[18px] font-medium  " >
+                                    <img src="./assets/images/Frame3.png" alt=""  class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                                </a></li>
+                            <li id="bill" class="nav-links"><a href="bill-payment.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                    <img src="./assets/images/Frame4.png" alt=""  class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">
+                                        Payment
+                                    </h5>
+                                </a></li>
+                                <li id="report" class="nav-links"><a href="report.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                        class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                                </a></li>
+
+
+                            <li id="analytics" class="nav-links"><a href="Analytics.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/graph.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                                </a></li>
+
+                                <li id="settings" class="nav-links">
+                                    <a href="settings.html"  class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                    <img src="./assets/images/Frame5.png" alt=""  class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                          
+                            <li id="log-out" class="nav-links">
+                                <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  " >
+                                    <img src="./assets/images/Frame6.png" alt=""  class="w-[30px] h-[30px] "  />
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class=" xxl:w-[80%] lg:w-[90%] xs:w-[100%] h-[100%] md:mx-auto xs:mx-0  xxl:mx-0 gap-[1rem] p-2 flex flex-col   ">
+            <div class="xl:hidden xs:flex " id="toggle">
+                <img src="./assets/images/Frame 1000003743.png" class="w-[50px] cursor-pointer h-[50px]" alt="">
+            </div>
+
+            <h5 class="font-semibold  text-[30px] mt-4   text-black">
+                Card
+            </h5>
+
+           <div class=" w-[70%] p-[3rem] gap-2 bg-fair rounded-[18px] flex flex-col mx-auto " style="height: 100%;">
+                <h5 id="text">Card Information</h5>
+
+                <div class=" gap-3 " id="back" style="display: none;">
+                    <img src="./assets/images/ion_arrow-back (1).png" class="w-[49px] h-[49px]" alt="">
+                    <h5 class="font-semibold text-black text-[20px]">Block Virtual card</h5>
+                </div>
+
+                <div class=" w-[100%] p-[2rem] gap-3 flex " style="height: 40%;">
+                    <div class="  relative   " style="height:100%; width: 50%;">
+                        <div class="w-[80%]  bg-gray-300  " style="height: 30%; border-radius: 22px 22px 0px 0px;"></div>
+                        <div class="w-[100%] bg-primary h-[100%] rounded-[22px] p-6 gap-3 flex flex-col absolute top-[8%] left-[-9%]">
+                            <img src="./assets/images/flat-color-icons_sim-card-chip.png" class="w-[48px] h-[48px] flex items-start " alt="" />
+                            <div class="flex flex-col justify-center">
+                                <h4 class="font-semibold text-[16px] text-fair">4361  2444  0132  1234</h4>
+                                <h4 class="font-semibold text-[16px] text-fair">11/12</h4>
+                            </div>
+                            <img  src="./assets/images/Visaector.png" class="w-[30px] h-[30px] flex justify-end items-end" alt=""  />
+                        </div>
+                    </div>
+
+                    <div id="view" class="  relative   " style="height:100%; display: none; width: 50%;">
+                        <div class="w-[80%]  bg-gray-300  " style="height: 30%; border-radius: 22px 22px 0px 0px;"></div>
+                        <div class="w-[100%] bg-primary h-[100%] rounded-[22px] flex items-center justify-center absolute top-[8%] left-[-9%]">
+                            <div class=" w-[70%] h-[70px] flex justify-center items-center bg-fair rounded-[4px]">
+                                <h5  class="font-semibold text-[16px] text-black">201</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class=" w-[100%] gap-5 flex p-[2rem] h-[40%]  ">
+                    <div class="w-[120px] h-[48px] rounded-[10px] flex justify-center  items-center bg-black " id="show">
+                        <p class="text-white text-[16px] font-medium ">Show Details</p>
+                    </div>
+
+                    <div id="hide-too" style="display: none;" class=" flex-col gap-3">
+                        <p>16 digit code</p>
+
+                        <div>
+                            <h5>4361  2444  0132  1234</h5>
+                            <img src="./assets/images/Copy.png" class="w-[20px] h-[20px]" alt="">
+                        </div>
+
+                        <p>CVV</p>
+                        <div>
+                            <h5>201</h5>
+                            <img src="./assets/images/Copy.png" class="w-[20px] h-[20px]" alt="">
+
+                        </div>
+
+                        <p>Expiry Date</p>
+                        <div>
+                            <h5>11/12</h5>
+                            <img src="./assets/images/Copy.png" class="w-[20px] h-[20px]" alt="">
+                        </div>
+                    </div>
+
+                    <div class="w-[120px] h-[48px] rounded-[10px]  justify-center  items-center mx-auto bg-black " style="display: none;" id="disappear">
+                        <p class="text-white text-[16px] font-medium ">Hide Details</p>
+                    </div>
+                </div>
+
+                <div class="w-[50%] h-[58px] bg-gray-300 flex justify-between pl-3 pr-3  " id="manage">
+                    <h4 class="text-primary font-semibold text-[14px] flex justify-start items-center">Manage Card</h4>
+                    <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[20px] h-[20px] my-auto  flex justify-end items-center" alt="">
+                </div>
+
+                <div id="manage-card" class=" flex-col gap-3 " style="display: none;">
+                    <div class="w-[50%] h-[58px] bg-gray-300 flex justify-between pl-3 pr-3  " >
+                        <div class="flex flex-col">
+                            <h4 class="text-primary font-semibold text-[14px] flex justify-start items-center">Card Pin</h4>
+                            <p class="text-primary font-medium text-[12px] flex justify-start items-center">View and Reset this card PIN</p>
+                        </div>
+                        <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[20px] h-[20px] my-auto  flex justify-end items-center" alt="">
+                    </div>
+
+                    <div class="w-[50%] h-[58px] bg-gray-300 flex justify-between pl-3 pr-3  " >
+                        <div class="flex flex-col">
+                            <h4 class="text-primary font-semibold text-[14px] flex justify-start items-center">Set Limit</h4>
+                            <p class="text-primary font-medium text-[12px] flex justify-start items-center">Transaction limit on this card</p>
+                        </div>
+                        <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[20px] h-[20px] my-auto  flex justify-end items-center" alt="">
+                    </div>
+                </div>
+
+                <div class="w-[50%] h-[58px] bg-black flex justify-between pl-3 pr-3 " id="block">
+                    <h4 class="text-red-700 font-semibold text-[14px] flex justify-start items-center">Block Card</h4>
+                    <img src="./assets/images/ri_arrow-right2-s-line.png" class="w-[20px] my-auto h-[20px] flex justify-end items-center" alt="">
+                </div>
+
+                <div class="w-[50%] h-[68px] bg-gray-500  justify-between pl-3 pr-8 " id="manage-block" style="display: none;"  >
+                   <div class="flex flex-col gap-2 ">
+                    <h4 class="text-gray-200 font-semibold text-[14px] flex justify-start items-center">Block Card</h4>
+                        <p class="text-gray-200 font-medium text-[12px]  flex justify-start items-center">Temporarily disable card</p>
+                   </div>
+                    
+                   <div id="toggleDiv" class="bg-black w-[62px] h-[33px] pl-2 cursor-pointer rounded-[44px] pr-2 flex my-auto justify-between ">
+                    <div id="fairDiv" class="w-[22px] h-[22px] my-auto bg-fair rounded-[50px]"></div>
+                    <!-- <div id="redDiv" class="w-[22px] h-[22px] my-auto bg-fair rounded-[50px]" style="display: none;"></div> -->
+                   </div>
+                </div>
+
+                <div class="w-[60%] h-[168px] bg-gray-400 rounded-[10px]  flex-col gap-2 pl-4 pt-2 font-medium text-gray-200 text-[14px]  " style="display: none;" id="block-info">
+                    <p>Blocking your card will stop</p>
+
+                    <div class="mt-3 flex flex-col gap-3">
+                        <div class="flex gap-2">
+                            <img src="./assets/images/typcn_tick.png" class="w-[20px] h-[20px]" alt="">
+                            <p>Online payments</p>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <img src="./assets/images/typcn_tick.png" class="w-[20px] h-[20px]" alt="">
+                            <p>Cardles withdrawals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[60%] h-[168px] bg-gray-400 rounded-[10px]  flex-col gap-2 pl-4 pt-2 font-medium text-gray-200 text-[14px]  " style="display: none;" id="no-block-info">
+                    <p>Blocking your card will stop</p>
+
+                    <div class="mt-3 flex flex-col gap-3">
+                        <div class="flex gap-2">
+                            <img src="./assets/images/iconamoon_close-bold.png" class="w-[20px] bg-fair h-[20px]" alt="">
+                            <p>Online payments</p>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <img src="./assets/images/iconamoon_close-bold.png" class="w-[20px] bg-fair h-[20px]" alt="">
+                            <p>Cardles withdrawals</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       
+
+
+           
+        </div>
+
+    </div>
+    
+    
+    <script src="./javascript/toggle.js"></script>
+    <script src="./javascript/show.js"></script>
+    <script src="./javascript/card.js">
+    //      const toggleDiv = document.getElementById('toggleDiv');
+    // const fairDiv = document.getElementById('fairDiv');
+    // // const redDiv = document.getElementById('redDiv');
+    // // const blockInfo = document.getElementById('blockInfo');
+    // const unBlockInfo = document.getElementById('no-block-info');
+    // var isHidden = true;
+    
+    // fairDiv.addEventListener('click', () => {
+    //     console.log(addEventListener);
+
+
+    //     // toggleDiv.style.transform = 'translateX(15px) ';
+    //     toggleDiv.style.backgroundColor = 'black'; 
+    //     fairDiv.style.display = 'translateX(15px) ';
+    //     // redDiv.style.display = 'block';
+    //     blockInfo.style.display = "flex";
+    //     unBlockInfo.style.display = "none";
+    // });
+    
+
+    // redDiv.addEventListener('click', () => {
+    //     // toggleDiv.style.transform = 'translateX(0)';
+    //     toggleDiv.style.backgroundColor = 'red';
+    //     fairDiv.style.display = 'translateX(0)';
+    //     // redDiv.style.display = 'none';
+    //     blockInfo.style.display = "none";
+    //     unBlockInfo.style.display = "flex";
+    // });
+    </script>
+</body>
+
+</html>

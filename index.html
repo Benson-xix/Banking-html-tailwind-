@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/bootstrap/bootstrap-icons.css">
+    <script src="./assets/canvasjs-chart-3.7.23/canvasjs.min.js"></script>
+    <script src="./javascript/jquery-3.7.1.min.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="  w-full relative h-[100%] md:p-4 xs:p-0 xl:gap-2 lg:gap-0  flex flex-row ">
+        <nav
+            class=" xxl:w-[20%] lg:w-[10%] relative    h-[200vh] xs:hidden  xl:flex flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+            <div class="fixed ">
+                <div>
+                    <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex xxl:flex-row  lg:flex-col gap-2  ">
+                        <img src="./assets/images/logo.png"
+                            class="w-[48px] h-[48px]  justify-center items-center mx-auto " alt="logo">
+                        <h5
+                            class="text-white xxl:text-[24px] xs:text-[24px]  lg:text-[16px] xxl:ml-[0rem]  lg:ml-[-0.8rem]  mx-auto  font-bold">
+                            PrimeLabs
+                        </h5>
+                    </a>
+                </div>
+                <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                            <li class="nav-links" id="dashboard">
+
+                                <a href="index.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  active-link ">
+                                    <img src="./assets/images/ic_round-space-dashboard.png" class="w-[30px] h-[30px]"
+                                        alt="">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                                </a>
+                            </li>
+
+                            <li class="nav-links" id="card">
+                                <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame2.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                                </a>
+                            </li>
+                            <li class="nav-links" id="transfer"><a href="transfer.html"
+                                    class="flex gap-3 mx-auto text-white text-[18px] font-medium  ">
+                                    <img src="./assets/images/Frame3.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                                </a></li>
+                            <li id="bill" class="nav-links"><a href="bill-payment.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame4.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">
+                                        Payment
+                                    </h5>
+                                </a></li>
+
+                            <li id="report" class="nav-links"><a href="report.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                        class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                                </a></li>
+
+
+                            <li id="analytics" class="nav-links"><a href="Analytics.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/graph.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                                </a></li>
+
+                            <li id="settings" class="nav-links">
+                                <a href="settings.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame5.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+
+                            <li id="log-out" class="nav-links">
+                                <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame6.png" alt="" class="w-[30px] h-[30px] " />
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="hide" style="display: none; width: 100%; position: fixed; left: 1%; top: 2%; z-index: 1000;">
+
+            <nav
+                class=" w-[100%]   h-[200vh]   flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+                <div class="flex justify-end p-2" id="close">
+                    <img src="./assets/images/Frame11000003743.png" class="w-[50px] cursor-pointer h-[50px]" alt="">
+                </div>
+                <div>
+                    <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex flex-row    ">
+                        <img src="./assets/images/logo.png"
+                            class="w-[48px] h-[48px]  justify-center items-center mx-auto " alt="logo">
+                        <h5 class="text-white text-[24px]    mx-auto  font-bold">PrimeLabs
+                        </h5>
+                    </a>
+                </div>
+                <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                            <li class="nav-links" id="dashboard">
+
+                                <a href="./index.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  active-link ">
+                                    <img src="./assets/images/ic_round-space-dashboard.png" class="w-[30px] h-[30px]"
+                                        alt="">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                                </a>
+                            </li>
+
+                            <li class="nav-links" id="card">
+                                <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame2.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                                </a>
+                            </li>
+                            <li class="nav-links" id="transfer"><a href="transfer.html"
+                                    class="flex gap-3 mx-auto text-white text-[18px] font-medium  ">
+                                    <img src="./assets/images/Frame3.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                                </a></li>
+                            <li id="bill" class="nav-links"><a href="bill-payment.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame4.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">
+                                        Payment
+                                    </h5>
+                                </a></li>
+                            <li id="report" class="nav-links"><a href="report.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                        class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                                </a></li>
+
+
+                            <li id="analytics" class="nav-links"><a href="Analytics.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/graph.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                                </a></li>
+
+                            <li id="settings" class="nav-links">
+                                <a href="settings.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame5.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+
+                            <li id="log-out" class="nav-links">
+                                <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame6.png" alt="" class="w-[30px] h-[30px] " />
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div
+            class=" xxl:w-[80%] lg:w-[90%] xs:w-[100%] h-[calc(100vh-20px)] md:mx-auto xs:mx-0  xxl:mx-0 gap-[1rem]  flex flex-col   ">
+            <div
+                class=" w-[100%]  h-[70px] rounded-[3px] bg-fair drop-shadow-md  p-3  flex items-center flex-row justify-between ">
+
+
+
+                <div class="relative flex items-start gap-2 sm:w-[40%] xs:w-[20%] ">
+                    <div class="xl:hidden xs:flex " id="toggle">
+                        <img src="./assets/images/Frame 1000003743.png" class="w-[50px] cursor-pointer h-[50px]" alt="">
+                    </div>
+
+
+                    <input type="text" placeholder="Search"
+                        class="rounded-[30px] sm:flex xs:hidden w-[100%] h-[50px] bg-white dark">
+                    <button type="button"
+                        class="absolute  hover:color-icon  sm:flex xs:hidden  right-[10px] top-2 px-[6px] py-[4px] z-10 rounded-[4px] cursor-pointer w-[40px] h-[40px]">
+                        <i class=" bi bi-search w-[30px] h-[40px] hover"></i>
+                    </button>
+                </div>
+
+
+                <div class=" justify-end  flex sm:w-[50%] xs:w-[80%]  ">
+                    <img src="./assets/images/noti.png"
+                        class="sm:w-[40px] xs:w-[20px] xs:mt-3 sm:mt-0 sm:h-[40px] xs:h-[20px]" alt="">
+                    <div class=" flex sm:gap-5 xs:gap-1 ">
+                        <img src="./assets/images/ava.png"
+                            class="sm:w-[50px] xs:w-[30px] xs:mt-2 sm:mt-0  sm:h-[50px] xs:h-[30px]   " alt="">
+                        <div class=" flex gap-2 flex-col">
+                            <h3 class="text-black text-[14px] font-medium">Samuel</h3>
+                            <h5 class="text-gray-500 text-[12px] font-medium">samuel@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" w-[100%] flex flex-col gap-3 mt-1 md:p-0 xs:p-3  ">
+                <div class=" w-[100%] flex md:flex-row xs:flex-col  xxl:gap-3 lg:gap-[3rem] xs:gap-[1rem]  ">
+                    <div class="relative  md:w-[50%] xl:mt-[3rem] sm:mt-[1rem] xs:mt-[0rem] ">
+                        <div class="xxl:w-[80%] xs:w-[90%] xs:h-[320px]  rounded-[20px] relative left-[5%] bg-icon ">
+                            <div class="flex items-center absolute xxl:top-[80%] xs:top-[85%] gap-[2rem] left-[35%] ">
+                                <div
+                                    class="xxl:w-[70px] xs:w-[50px] bg-fair xs:h-[50px] xxl:h-[70px] rounded-[70px] flex justify-center items-center ">
+                                    <img src="./assets/images/Vector.png" class="w-[20px] h-[15px]" alt="">
+                                </div>
+                                <h5 class="font-medium text-fair lg:text-[16px] xxl:text-[20px]">Samuel john</h5>
+                            </div>
+
+                        </div>
+                        <div
+                            class="xxl:w-[90%] xs:w-[100%]  h-[280px] rounded-[20px] bg-primary absolute xs:top-[-2%] xxl:top-[-10%]">
+                            <div class=" flex justify-between p-6 ">
+                                <div class="flex flex-col gap-4 ">
+                                    <div class="flex gap-3">
+                                        <p class="text-fair xxl:text-[20px] xs:text-[18px] font-normal ">Total balance
+                                        </p>
+                                        <img src="./assets/images/eye.png"
+                                            class="xxl:w-[30px] xxl:mt-0 lg:mt-3  xs:w-[20px] xs:h-[20px] xxl:h-[30px]"
+                                            alt="">
+                                    </div>
+                                    <p class="text-fair text-[30px] font-normal ">*** *** **</p>
+                                </div>
+                                <div class="flex">
+                                    <p class="font-normal text-fair xxl:text-[20px] xs:text-[16px]">Transaction History
+                                    </p>
+                                    <img src="./assets/images/arrow.png"
+                                        class="xxl:w-[30px] xs:w-[20px] xs:h-[20px] xxl:mt-0 lg:mt-3 xxl:h-[30px]"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between mt-4 p-5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <img src="./assets/images/Group 1000004531.png"
+                                        class="w-[50px] h-[50px]  rounded-[4px]" alt="">
+                                    <p class="text-fair text-[18px] font-normal ">Add money</p>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <img src="./assets/images/Group 1000004532.png"
+                                        class="w-[50px] h-[50px] rounded-[4px]" alt="">
+                                    <p class="text-fair text-[18px] font-normal ">Transfer</p>
+                                </div>
+                                <div class="flex flex-col justify-center items-center gap-1">
+                                    <img src="./assets/images/Group 1000004533.png"
+                                        class="w-[50px] h-[50px]  rounded-[4px]" alt="">
+                                    <p class="text-fair text-[18px] font-normal ">Withdraw</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" md:w-[50%] xs:w-[100%] flex  flex-col  ">
+                        <div class="w-[100%] h-[100px] bg-fair p-4 gap-2 flex flex-col   ">
+                            <div class="flex justify-between   ">
+                                <h5 class="flex justify-start font-medium text-[#141736] text-[18px] ">Income</h5>
+
+                                <div class="flex justify-end gap-3">
+                                    <img src="./assets/images/upGroup.png" class="w-[20px] h-[20px]" alt="">
+                                    <img src="./assets/images/Group 942.png" class="w-[20px] h-[20px]" alt="">
+                                </div>
+                            </div>
+
+                            <div class=" flex justify-between  ">
+                                <div class="flex gap-2 justify-start">
+                                    <img src="./assets/images/Group 886.png" class="w-[30px] h-[30px]" alt="">
+                                    <h6 class="font-medium text-[#141736] text-[18px]">Savings</h6>
+                                    <img src="./assets/images/Group3000.png" class="w-[30px] h-[20px]" alt="">
+                                    <p class="font-medium text-[#141736] text-[18px]"></p>>+6,79%</p>
+                                </div>
+
+                                <div
+                                    class="w-[90px] h-[30px] rounded-[7px] justify-end   flex border-solid border-2 border-gray-500">
+                                    <h6 class="text-center flex mx-auto justify-center">Week</h6>
+                                    <!-- <img src="./assets/images/Group3001.png"  class=" mx-auto w-[20px] h-[20px]  " alt=""> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chartContainer" class="h-[370px]  w-[100%]"></div>
+                        <div id="customPopup"
+                            style="display: none; background-color: #141736; color: white; border-radius: 6px; width: 67px; position: absolute; height: 44px;">
+                            <p id="popupContent"></p>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="flex gap-5 md:flex-row xs:flex-col  w-[100%]    ">
+                    <div class="md:w-[65%] flex flex-col">
+                        <div class="w-[100%] h-[100px] bg-fair p-4 gap-2 flex flex-col   ">
+                            <div class="flex justify-between   ">
+                                <h5 class="flex justify-start font-medium text-[#141736] text-[18px] ">Expense</h5>
+
+                                <div class="flex justify-end gap-3">
+                                    <img src="./assets/images/1Group.png" class="w-[20px] h-[20px]" alt="">
+                                    <img src="./assets/images/Group 9442.png" class="w-[20px] h-[20px]" alt="">
+                                </div>
+                            </div>
+
+                            <div class=" flex justify-between  ">
+                                <div class="flex gap-2 justify-start">
+                                    <img src="./assets/images/11Group.png" class="w-[30px] h-[30px]" alt="">
+                                    <p class="font-medium text-[#141736] text-[18px]"></p>$20,000</p>
+                                </div>
+
+                                <div
+                                    class="w-[90px] h-[30px] rounded-[10px] justify-end   flex border-solid border-2 border-gray-500">
+                                    <h6 class="text-center flex mx-auto justify-center">Week</h6>
+                                    <!-- <img src="./assets/images/Group3001.png"  class=" mx-auto w-[20px] h-[20px]  " alt=""> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chartContainer2" class="h-[370px] w-[100%]"> </div>
+                        <div id="customPopup2"
+                            style="display: none; background-color: #141736; color: white; border-radius: 6px; width: 67px; position: absolute; height: 44px;">
+                            <p id="popupContent2"></p>
+                        </div>
+                    </div>
+
+                    <div class=" md:w-[35%] flex gap-5 lg:flex-col  xs:flex-col">
+                        <div
+                            class="w-[100%] bg-fair h-[130px] rounded-[10px] gap-[5px] justify-center flex flex-col items-center">
+                            <h4 class="font-medium text-[16px] text-black">Available balance</h4>
+
+                            <h4 class="font-medium text-[20px] text-words">$40,000,000</h4>
+                        </div>
+
+                        <div class="w-[100%] h-[217px] rounded-[10px] bg-fair flex-col gap-[11rem] px-5 py-3 ">
+                            <h5>Spending Limit</h5>
+                            <p class="mt-2">Daily transaction limit</p>
+                            <div class="w-[100%] h-[20px] mt-4 rounded-[10px] flex bg-green-200 ">
+                                <div class="w-[50%] h-[100%] rounded-[10px] bg-words"></div>
+                            </div>
+                            <h5 class="text-icon mt-2 flex justify-end">50%</h5>
+
+                            <div class="flex justify-between mt-4 ">
+                                <div class="flex flex-col justify-start">
+                                    <div class="flex gap-2 ">
+                                        <img src="./assets/images/Ellipse 961.png" class="w-[10px] flex mt-2 h-[10px]"
+                                            alt="">
+                                        <p class="font-normal text-[14px]">Outstanding</p>
+                                    </div>
+
+                                    <div class="flex gap-2 ">
+                                        <img src="./assets/images/Ellipse1 961.png" class="w-[10px] flex mt-2  h-[10px]"
+                                            alt="">
+                                        <p class="font-normal text-[14px]">Available</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex bg-green-200 w-[104px] h-[32px] rounded-[5px] items-center justify-center ">
+                                    <p class="flex">Pay Now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="flex w-[100%]  flex-col">
+                    <div class="w-[100%] h-[100px] bg-fair p-4 gap-2 flex flex-col   ">
+                        <h5 class="font-medium text-[16px] text-black">Transaction Overview</h5>
+
+                        <div class=" flex justify-between mt-3 ">
+                            <div class="flex gap-4">
+                                <img src="./assets/images/Ellipse 961.png" class="w-[10px] flex  h-[10px]" alt="">
+                                <p class="text-[12px] font-normal ">Money in</p>
+                                <img src="./assets/images/Ellipse1 961.png" class="w-[10px] flex   h-[10px]" alt="">
+                                <p class="text-[12px] font-normal ">Money Out</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <img src="./assets/images/Dot2.png" class="w-[20px] flex  h-[20px]" alt="">
+                                <p class="text-[12px] font-normal ">Monthly</p>
+                                <img src="./assets/images/Dot12.png" class="w-[20px] flex  h-[20px]" alt="">
+                                <p class="text-[12px] font-normal ">Weekly</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="detailedChart" class="h-[570px]  w-[100%] "></div>
+                </div>
+
+                <div class="w-[100%] flex md:flex-row xs:flex-col gap-[.5rem] ">
+                    <div
+                        class="md:w-[40%] xs:w-[100%] lg:h-[302px] xs:h-[400px] rounded-[10px] p-3 mb-3 bg-fair flex flex-col">
+                        <div class=" flex  pl-3 justify-between">
+                            <h5 class="flex justify-start font-semibold text-[16px] text-black">Recent activites</h5>
+
+                            <div class="flex gap-2 justify-end">
+                                <h5 class="font-normal text-[14px] text-gray-300">view statement</h5>
+                                <img src="./assets/images/Frame100.png" class="w-[20px] h-[20px]" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex mt-3 justify-between">
+                            <div class="flex justify-start gap-3">
+                                <div class="flex  gap-3 flex-col">
+                                    <img src="./assets/images/Female05.png" class="w-[30px] h-[30px]" alt="">
+                                    <div class="w-[2px] mx-auto flex h-[10px]  bg-gray-500"></div>
+                                    <img src="./assets/images/Female06.png" class="w-[30px] h-[30px]" alt="">
+                                    <div class="w-[2px] h-[10px] mx-auto bg-gray-500"></div>
+                                    <img src="./assets/images/3D08.png" class="w-[30px] h-[30px]" alt="">
+                                    <div class="w-[2px] h-[10px] mx-auto bg-gray-500"></div>
+                                    <img src="./assets/images/Framemon3.png" class="w-[30px] h-[30px]" alt="">
+                                </div>
+                                <div class="flex flex-col mt-1 gap-3">
+                                    <div>
+                                        <p class="font-semibold text-[16px] text-black">UPI/P2M/300765</p>
+                                        <p class="font-normal text-[14px] text-gray-300">samuel/kuda/paying</p>
+                                    </div>
+
+                                    <div>
+                                        <p class="font-semibold text-[16px] text-black">UPI/P2M/300765</p>
+                                        <p class="font-normal text-[14px] text-gray-300">Ebere/opay/paying</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[16px] text-black">UPI/P2M/300765</p>
+                                        <p class="font-normal text-[14px] text-gray-300">zaria/access/paying</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[16px] text-black">POS/ SAHID ABUBAKAR</p>
+                                        <p class="font-normal text-[14px] text-gray-300">Ebere/30987/11:23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-[3rem]  justify-end">
+                                <p class="font-normal text-[14px] text-gray-300">RS:1000</p>
+                                <p class="font-normal text-[14px] text-gray-300">RS:1000</p>
+                                <p class="font-normal text-[14px] text-gray-300">RS:1000</p>
+                                <p class="font-normal text-[14px] text-gray-300">RS:1000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="md:w-[60%] xs:w-[100%] p-3 xxl:h-[287px] xs:h-[400px] bg-fair flex flex-col gap-5 rounded-[10px]">
+                        <div class="flex justify-between ">
+                            <h4 class="justify-start flex ">Recent Transactions</h4>
+
+                            <div class="flex gap-2 justify-end">
+                                <p class="font-normal text-[14px] text-gray-300">All</p>
+                                <img src="./assets/images/Vector.png" class="w-[15px] mt-2 h-[10px]" alt="">
+                                <p class="font-normal text-[14px] text-gray-300">Monthly</p>
+                                <img src="./assets/images/Vector.png" class="w-[15px] mt-2 h-[10px]" alt="">
+                                <p class="font-normal text-[14px] text-gray-300">Yearly</p>
+                                <img src="./assets/images/Frameme.png" class="w-[20px] mt-2 h-[20px]" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex md:gap-4 xsm:gap-[3rem] xs:gap-2 ">
+                            <div class="flex gap-2  ">
+                                <img src="./assets/images/image 165.png" class="w-[27px] h-[27px]" alt="">
+                                <h5 class="text-black md:text-[12px] xs:text-[9px] mt-1 font-bold">Bitcoin Transactions
+                                </h5>
+                            </div>
+
+                            <h5 class="sm:flex  xs:hidden">mar 20, 2023</h5>
+
+                            <h5>*****45242</h5>
+
+                            <h5>-$853.00</h5>
+
+                            <div class="w-[72px] h-[25px] rounded-[3px] mx-auto bg-green-300">
+                                <p class="font-medium text-[12px] mt-1 text-center items-center  text-green-500">
+                                    Completed</p>
+                            </div>
+                        </div>
+
+                        <div class="flex md:gap-5 xsm:gap-[3rem] xs:gap-2 ">
+                            <div class="flex gap-2">
+                                <img src="./assets/images/Ellipse 357.png" class="w-[27px] h-[27px]" alt="">
+                                <h5 class="text-black text-[12px] mt-1 font-bold">Sent to anitonia</h5>
+                            </div>
+
+                            <h5 class="sm:flex  xs:hidden">mar 22, 2023</h5>
+
+                            <h5>*****45242</h5>
+
+                            <h5>-$853.00</h5>
+
+                            <div class="w-[72px] h-[25px] rounded-[3px] mx-auto bg-red-400">
+                                <p class="font-medium text-[12px] mt-1 text-center items-center  text-orange-400">
+                                    Pending</p>
+                            </div>
+                        </div>
+
+                        <div class="flex md:gap-5 xsm:gap-[3rem] xs:gap-2  ">
+                            <div class="flex gap-2">
+                                <img src="./assets/images/Group 1000003744.png" class="w-[27px] h-[27px]" alt="">
+                                <h5 class="text-black text-[12px] mt-1 font-bold">Withdraw Paypal</h5>
+                            </div>
+
+                            <h5 class="sm:flex  xs:hidden">mar 26, 2023</h5>
+
+                            <h5>*****45242</h5>
+
+                            <h5>-$853.00</h5>
+
+                            <div class="w-[72px] h-[25px] rounded-[3px] mx-auto bg-red-500">
+                                <p class="font-medium text-[12px] mt-1 text-center items-center  text-red-800">cancelled
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex md:gap-4 xsm:gap-[3rem] xs:gap-2 ">
+                            <div class="flex gap-2">
+                                <img src="./assets/images/image 165.png" class="w-[27px] h-[27px]" alt="">
+                                <h5 class="text-black md:text-[12px] xs:text-[9px] mt-1 font-bold">Bitcoin Transactions
+                                </h5>
+                            </div>
+
+                            <h5 class="sm:flex  xs:hidden">mar 20, 2023</h5>
+
+                            <h5>*****45242</h5>
+
+                            <h5>-$853.00</h5>
+
+                            <div class="w-[72px] h-[25px] rounded-[3px] mx-auto bg-green-300">
+                                <p class="font-medium text-[12px] mt-1 text-center items-center  text-green-500">
+                                    Completed</p>
+                            </div>
+                        </div>
+
+                        <div class="flex md:gap-5 xsm:gap-[3rem] xs:gap-2 ">
+                            <div class="flex gap-2">
+                                <img src="./assets/images/Ellipse 357.png" class="w-[27px] h-[27px]" alt="">
+                                <h5 class="text-black text-[12px] mt-1 font-bold">Sent to anitonia</h5>
+                            </div>
+
+                            <h5 class="sm:flex  xs:hidden">mar 22, 2023</h5>
+
+                            <h5>*****45242</h5>
+
+                            <h5>-$853.00</h5>
+
+                            <div class="w-[72px] h-[25px] rounded-[3px] mx-auto bg-red-400">
+                                <p class="font-medium text-[12px] mt-1 text-center items-center  text-orange-400">
+                                    Pending</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w-[100%] h-[30px] "></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./javascript/nav.js"></script>
+    <script src="./javascript/toggle.js"></script>
+
+    <!-- <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script> -->
+
+</body>
+
+</html>

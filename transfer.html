@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" type="text/css" rel="stylesheet">
+    <title>transfer</title>
+</head>
+
+<body>
+    <div class="   w-full   md:p-4 xs:p-0 xl:gap-2 lg:gap-0  flex flex-row " style="height: 1000px;">
+        <nav
+            class=" xxl:w-[20%] lg:w-[10%] relative    h-[100%] xs:hidden  xl:flex flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+            <div class="fixed ">
+                <div>
+                    <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex xxl:flex-row  lg:flex-col gap-2  ">
+                        <img src="./assets/images/logo.png"
+                            class="w-[48px] h-[48px]  justify-center items-center mx-auto " alt="logo">
+                        <h5
+                            class="text-white xxl:text-[24px] xs:text-[24px]  lg:text-[16px] xxl:ml-[0rem]  lg:ml-[-0.8rem]  mx-auto  font-bold">
+                            PrimeLabs
+                        </h5>
+                    </a>
+                </div>
+                <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                            <li class="nav-links" id="dashboard">
+
+                                <a href="index.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium   ">
+                                    <img src="./assets/images/ic_round-space-dashboard2.png" class="w-[30px] h-[30px]"
+                                        alt="">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                                </a>
+                            </li>
+
+                            <li class="nav-links" id="card">
+                                <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium   ">
+                                    <img src="./assets/images/Frame2.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                                </a>
+                            </li>
+                            <li class="nav-links" id="transfer"><a href="transfer.html"
+                                    class="flex gap-3 mx-auto text-white text-[18px] font-medium active-link ">
+                                    <img src="./assets/images/transfer.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                                </a></li>
+                            <li id="bill" class="nav-links"><a href="bill-payment.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame4.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">
+                                        Payment
+                                    </h5>
+                                </a></li>
+                            <li id="report" class="nav-links"><a href="report.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                        class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                                </a></li>
+
+
+                            <li id="analytics" class="nav-links"><a href="Analytics.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/graph.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                                </a></li>
+
+
+                            <li id="settings" class="nav-links">
+                                <a href="settings.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame5.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+
+                            <li id="log-out" class="nav-links">
+                                <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame6.png" alt="" class="w-[30px] h-[30px] " />
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="hide" style="display: none; width: 100%; position: fixed; left: 1%; top: 2%; z-index: 1000;">
+
+            <nav
+                class=" w-[100%]   h-[200vh]   flex-col rounded-[10px] bg-primary   z-50 transition ease-in-out duration-300 ">
+                <div class="flex justify-end p-2" id="close">
+                    <img src="./assets/images/Frame11000003743.png" class="w-[50px] cursor-pointer h-[50px]" alt="">
+                </div>
+                <div>
+                    <a href="index.html" class="px-6 pt-8 pb-0 min-h-16 m-0 flex flex-row    ">
+                        <img src="./assets/images/logo.png"
+                            class="w-[48px] h-[48px]  justify-center items-center mx-auto " alt="logo">
+                        <h5 class="text-white text-[24px]    mx-auto  font-bold">PrimeLabs
+                        </h5>
+                    </a>
+                </div>
+                <div class="  flex flex-col px-6 gap-[10rem] pt-8 pb-0">
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+                            <li class="nav-links" id="dashboard">
+
+                                <a href="index.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium   ">
+                                    <img src="./assets/images/ic_round-space-dashboard.png" class="w-[30px] h-[30px]"
+                                        alt="">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Dashboard</h5>
+                                </a>
+                            </li>
+
+                            <li class="nav-links" id="card">
+                                <a href="card.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame2.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">My card</h5>
+                                </a>
+                            </li>
+                            <li class="nav-links" id="transfer"><a href="transfer.html"
+                                    class="flex gap-3 mx-auto text-white text-[18px] font-medium active-link  ">
+                                    <img src="./assets/images/transfer.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Fund transfer</h5>
+                                </a></li>
+                            <li id="bill" class="nav-links"><a href="bill-payment.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame4.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">
+                                        Payment
+                                    </h5>
+                                </a></li>
+                            <li id="report" class="nav-links"><a href="report.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/material-symbols_report-outline.png" alt=""
+                                        class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Report</h5>
+                                </a></li>
+
+
+                            <li id="analytics" class="nav-links"><a href="Analytics.html"
+                                    class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/graph.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Analytics</h5>
+                                </a></li>
+
+                            <li id="settings" class="nav-links">
+                                <a href="settings.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame5.png" alt="" class="w-[30px] h-[30px]">
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Settings</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="list-none flex flex-col no-underline gap-9   ">
+
+                            <li id="log-out" class="nav-links">
+                                <a href="log-out.html" class="flex gap-3 mx-auto text-white text-[20px] font-medium  ">
+                                    <img src="./assets/images/Frame6.png" alt="" class="w-[30px] h-[30px] " />
+                                    <h5 class="lg:hidden xxl:flex xs:flex">Log out</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div
+            class=" xxl:w-[80%] lg:w-[90%] xs:w-[100%] h-[100%] md:mx-auto xs:mx-0  xxl:mx-0 sm:gap-[1rem] xs:gap-2 p-2 flex flex-col   ">
+            <div class="xl:hidden xs:flex " id="toggle">
+                <img src="./assets/images/Frame 1000003743.png" class="w-[50px] cursor-pointer h-[50px]" alt="">
+            </div>
+
+            <div class=" w-[100%] h-[100%] flex flex-col gap-[1rem] mx-auto items-center ">
+                <div>
+                    <h5 class="flex justify-center">Funds Transfer</h5>
+                    <p>Send to a Bank Account</p>
+                </div>
+
+
+                <a href="transfer-page.html"
+                    class="w-[50%] h-[100px] flex gap-5 justify-between bg-fair rounded-[10px] items-center  mt-[4rem]">
+                    <div class=" w-[63px] h-[63px] rounded-[100%] flex justify-center items-center drop-shadow-md  ">
+                        <img src="./assets/images/Group110.png" class="w-[34px] h-[28px]" alt="">
+                    </div>
+
+                    <div class="flex flex-col gap-3 justify-between ">
+                        <h4 class="text-primary font-semibold text-[18px]">Send to a Noxa Bank User</h4>
+
+                        <h5 class="mt-2 text-gray-600 font-medium text-[14px]">Charge fee transfer</h5>
+                    </div>
+
+                    <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[24px] h-[23px] mr-3" alt="">
+                </a>
+
+
+                <a href=""
+                    class="w-[50%] h-[100px] flex gap-5 justify-between bg-fair rounded-[10px] items-center  mt-[4rem]">
+                    <div class=" w-[63px] h-[63px] rounded-[100%] flex justify-center items-center drop-shadow-md  ">
+                        <img src="./assets/images/Frame1398.png" class="w-[63px] h-[63px]" alt="">
+                    </div>
+
+                    <div class="flex flex-col gap-3 justify-between ">
+                        <h4 class="text-primary font-semibold text-[18px]">Send to a Bank Account</h4>
+
+                        <h5 class="mt-2 text-gray-600 font-medium text-[14px]">Send to a Local Bank account</h5>
+                    </div>
+
+                    <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[24px] h-[23px] mr-3" alt="">
+                </a>
+
+                <a href=""
+                    class="w-[50%] h-[100px] flex gap-5 justify-between bg-fair rounded-[10px] items-center  mt-[4rem]">
+                    <div class=" w-[63px] h-[63px] rounded-[100%] flex justify-center items-center drop-shadow-md  ">
+                        <img src="./assets/images/Frame1399.png" class="w-[63px] h-[63px]" alt="">
+                    </div>
+
+                    <div class="flex flex-col gap-3 justify-between ">
+                        <h4 class="text-black font-semibold text-[18px]">International Account</h4>
+
+                        <h5 class="mt-2 text-gray-600 font-medium text-[14px]">Send money to your friend quickly</h5>
+                    </div>
+
+                    <img src="./assets/images/ri_arrow-right-s-line.png" class="w-[24px] h-[23px] mr-3" alt="">
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="./javascript/edit.js"></script>
+    <script src="./javascript/toggle.js"></script>
+</body>
+
+</html>
